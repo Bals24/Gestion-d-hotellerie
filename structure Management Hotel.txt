@@ -1,0 +1,44 @@
+hotel-madagascar/
+├── app/
+│   ├── Http/
+│   │   ├── Controllers/
+│   │   │   └── Auth/          # Controllers Breeze (Login, Register, etc.)
+│   │   └── Middleware/
+│   │       ├── CheckRole.php   # Ton middleware personnalisé
+│   │       └── CheckPermission.php
+│   └── Models/
+│       ├── User.php           # Déjà modifié avec le rôle
+│       ├── Client.php
+│       ├── Room.php
+│       ├── Reservation.php
+│       ├── Payment.php
+│       └── Invoice.php
+├── resources/
+│   ├── views/
+│   │   ├── auth/              # Vues Breeze (login, register, etc.)
+│   │   │   ├── login.blade.php
+│   │   │   ├── register.blade.php
+│   │   │   ├── forgot-password.blade.php
+│   │   │   └── verify-email.blade.php
+│   │   ├── layouts/
+│   │   │   ├── app.blade.php   # Ton layout immersif 3D
+│   │   │   └── guest.blade.php # Layout pour visiteurs (Breeze)
+│   │   ├── dashboard.blade.php # Dashboard par défaut (à remplacer)
+│   │   ├── rooms/
+│   │   ├── reservations/
+│   │   ├── clients/
+│   │   ├── payments/
+│   │   └── exports/
+│   ├── css/
+│   │   ├── app.css            # Tailwind CSS (Breeze)
+│   │   └── immersive.css      # Tes styles 3D personnalisés
+│   └── js/
+│       └── immersive.js       # Tes interactions 3D
+├── routes/
+│   ├── web.php                # Tes routes protégées par rôle
+│   └── auth.php               # Routes Breeze (déjà générées)
+└── database/
+    ├── migrations/
+    └── seeders/
+        ├── RoleSeeder.php
+        └── HotelDataSeeder.php

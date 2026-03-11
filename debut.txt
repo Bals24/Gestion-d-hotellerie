@@ -1,0 +1,12 @@
+j'ai utiliser Laravel Breeze(package d'authentification simle pour le login/register)
+# Authentification
+composer require laravel/breeze --dev
+php artisan breeze:install(choirsir une option a installe, blade with alpine est le plus recommander)
+
+# Export Excel & PDF
+composer require maatwebsite/excel barryvdh/laravel-dompdf
+
+# Frontend
+npm install && npm run build
+
+

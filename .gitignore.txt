@@ -1,0 +1,47 @@
+# Laravel .gitignore
+
+# Fichiers sensibles
+.env
+*.key
+*.pem
+*.crt
+
+# Dépendances
+/vendor/
+/node_modules/
+
+# Fichiers générés
+/public/hot
+/public/storage
+/storage/*.key
+/storage/app/public/*.key
+/bootstrap/cache/*
+/storage/framework/cache/*
+/storage/framework/sessions/*
+/storage/framework/views/*
+/storage/logs/*
+
+# Fichiers système
+.DS_Store
+Thumbs.db
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Tests
+.phpunit.result.cache
+.coverage
+
+# Export Excel (optionnel - si tu veux pas commit les exports)
+/*.xlsx
+/*.pdf
+
+# Environment local spécifique
+npm-debug.log
+yarn-error.log
+
+# Laravel Telescope (si utilisé)
+/telescope/*
