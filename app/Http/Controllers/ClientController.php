@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 
 class ClientController extends Controller
 {
-    // ❌ PAS DE __construct() avec middleware()
+    
 
     public function index(Request $request) {
         $query = Client::query();
@@ -55,11 +55,11 @@ class ClientController extends Controller
             'country' => 'nullable|string',
         ]);
         $client->update($validated);
-        return redirect()->route('clients.index')->with('success', 'Client mis à jour ✅');
+        return redirect()->route('clients.index')->with('success', 'Client mis à jour ');
     }
 
     public function destroy(Client $client) {
         $client->delete();
-        return redirect()->route('clients.index')->with('success', 'Client supprimé ✅');
+        return redirect()->route('clients.index')->with('success', 'Client supprimé ');
     }
 }
